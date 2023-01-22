@@ -114,7 +114,8 @@ input[type='text'] {
   color: black;
 }
 
-input[type='submit'] {
+input[type='submit'], button {
+  width: 75px;
   background-color: #5927E5;
   border: 1px solid rgba(53, 20, 102, 0.9);
   color:rgb(225, 234, 238);
@@ -154,4 +155,13 @@ ul {
   align-items: center;
 }
 
+#get-url-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#get-button {
+  background-color: #0B6623;
+}
 

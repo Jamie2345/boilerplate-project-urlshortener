@@ -37,7 +37,7 @@
             </div>
           </form>
         </section>
-        <section id="get_url_section">
+        <section id="post_url_section">
           <div class="examples-container">
             <h2>Example Usage:</h2>
             <ul class="examples-lst">
@@ -45,6 +45,22 @@
             </ul>
             <h3>Will redirect to:</h3>
             <p><a href="https://github.com/Jamie2345">https://github.com/Jamie2345</a> (My Github)</p>
+          </div>
+        </section>
+        <section id="get-url-section">
+          <div class="inputBox">
+            <label for="url_input">URL:</label>
+            <input id="short_url_input" type="text" name="url" placeholder="Enter shortened URL (eg: 1)" />
+            <button id="get-button">Get URL</button>
+            <script>
+              document.querySelector('#get-button').addEventListener('click', function() {
+                let url = document.querySelector('#short_url_input').value.replace(/^\s+/gm, '');
+
+                if (url != '') {
+                  window.location.href = 'api/shorturl/' + url;
+                }
+              });
+            </script>
           </div>
         </section>
       </main>
